@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\Models\FilmInfra.cs" />
     <Compile Include="DB\Repository\FilmRepository.cs" />
     <Compile Include="HTTP\RestFullFilmService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
