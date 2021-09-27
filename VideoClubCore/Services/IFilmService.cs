@@ -11,5 +11,6 @@ namespace VideoClubCore.Services
     {
         Film GetById(string id);
         List<Film> GetByCategory(string category);
+        Film SetFilm(Film film);
     }
 }

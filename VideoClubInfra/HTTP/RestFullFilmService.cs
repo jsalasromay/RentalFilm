@@ -36,5 +36,18 @@ namespace VideoClubInfra.HTTP
                 return film;
             }
         }
+
+        public Film SetFilm(Film film)
+        {
+            string apiUrl = "https://localhost:44306/film/SetFilm";
+            using (WebClient client = new WebClient())
+            {
+                client.Headers["Content-type"] = "application/json";
+                client.Encoding = Encoding.UTF8;
+                string json = client.UploadString($"{apiUrl}", film.ToString());
+                var film2 = JsonConvert.DeserializeObject<Film>(json);
+                return film2;
+            }
+        }
     }
 }

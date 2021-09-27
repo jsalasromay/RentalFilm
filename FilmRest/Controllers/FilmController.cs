@@ -17,12 +17,16 @@ namespace FilmRest.Controllers
             var film = _filmService.GetById(id);
             return film;
         }
-
         [HttpGet("GetMovieByCategory/{category}")]
         public List<Film> GetMovieByCategory(string category)
         {
             var film = _filmService.GetByCategory(category);
             return film;
+        }
+        [HttpPost("[action]")]
+        public Film SetFilm([FromBody] Film film)
+        {
+            return _filmService.SetFilm(film);
         }
     }
 }

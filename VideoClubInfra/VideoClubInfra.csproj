@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Models\FilmInfra.cs" />
     <Compile Include="DB\Repository\FilmRepository.cs" />
     <Compile Include="HTTP\RestFullFilmService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -54,9 +55,7 @@
       <Name>VideoClubCore</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DB\Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
