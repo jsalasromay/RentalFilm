@@ -13,12 +13,20 @@ namespace VideoClubInfra.HTTP
         private Film _film;
         public List<Film> GetByCategory(string category)
         {
-            throw new NotImplementedException();
+            string apiUrl = "https://localhost:44306/film/GetMovieByCategory";
+            using (WebClient client = new WebClient())
+            {
+                client.Headers["Content-type"] = "application/json";
+                client.Encoding = Encoding.UTF8;
+                string json = client.DownloadString($"{apiUrl}/{_film.Category}");
+                var film = JsonConvert.DeserializeObject<List<Film>>(json);
+                return film;
+            }
         }
 
         public Film GetById(string id)
         {
-            string apiUrl = "https://localhost:44306/film";
+            string apiUrl = "https://localhost:44306/film/GetMovie";
             using (WebClient client = new WebClient())
             {
                 client.Headers["Content-type"] = "application/json";

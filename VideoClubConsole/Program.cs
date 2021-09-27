@@ -13,6 +13,15 @@ namespace VideoClubConsole
             var film = _filmService.GetById(Console.ReadLine());
             Console.WriteLine($"Nombre: {film.Name}");
             Console.WriteLine($"Category: {film.Category}");
+
+
+            Console.WriteLine("Seleccione la categoria que desee ver: Comedia, Drama, Sci-fi");
+            var film2 = _filmService.GetByCategory(Console.ReadLine());
+            foreach (var f in film2)
+            {
+                Console.WriteLine($"Nombre: {f.Name}");
+                Console.WriteLine($"Category: {f.Category}");
+            }
         }
     }
 }

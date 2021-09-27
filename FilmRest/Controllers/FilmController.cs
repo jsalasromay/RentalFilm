@@ -1,5 +1,6 @@
 ﻿using FilmRest.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using VideoClubCore.Domain;
 using VideoClubCore.Services;
 
@@ -10,10 +11,17 @@ namespace FilmRest.Controllers
     public class FilmController : ControllerBase
     {
         private static IFilmService _filmService = new FilmServices();
-        [HttpGet("{id}")]
+        [HttpGet("GetMovie/{id}")]
         public Film GetMovie(string id)
         {
             var film = _filmService.GetById(id);
+            return film;
+        }
+
+        [HttpGet("GetMovieByCategory/{category}")]
+        public List<Film> GetMovieByCategory(string category)
+        {
+            var film = _filmService.GetByCategory(category);
             return film;
         }
     }

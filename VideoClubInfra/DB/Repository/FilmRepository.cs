@@ -9,7 +9,11 @@ namespace VideoClubInfra.DB
         private static List<Film> _film;
         static FilmRepository()
         {
-            _film = new List<Film>() { new Film("AA", "El señor de los palillos", "Comedia"), new Film("AB", "Titanic", "Drama"), new Film("AC", "Star wars", "Ciencia Ficción") };
+            _film = new List<Film>() { 
+                new Film("AA", "El señor de los palillos", "Comedia"), 
+                new Film("AB", "Titanic", "Drama"), 
+                new Film("AC", "Star wars", "Sci-fi"),
+                new Film("AD", "Los simpsons la pelicula", "Comedia") };
         }
         public Film GetById(string id)
         {
