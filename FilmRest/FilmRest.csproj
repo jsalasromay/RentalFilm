@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VideoClubCore\VideoClubCore.csproj" />
+    <ProjectReference Include="..\VideoClubInfra\VideoClubInfra.csproj" />
+  </ItemGroup>
+
+
+</Project>
