@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\VideoClubCore\VideoClubCore.csproj" />
     <ProjectReference Include="..\VideoClubInfra\VideoClubInfra.csproj" />
   </ItemGroup>
