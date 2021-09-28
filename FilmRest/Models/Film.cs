@@ -10,6 +10,10 @@ namespace FilmRest
         public string Id { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
+        public Film()
+        {
+
+        }
         public Film(string id, string name, string category)
         {
             Id = id;

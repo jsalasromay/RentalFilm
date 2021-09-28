@@ -58,7 +58,8 @@ namespace VideoClubInfratruc.HTTP
             {
                 client.Headers["Content-type"] = "application/json";
                 client.Encoding = Encoding.UTF8;
-                string json = client.UploadString($"{apiUrl}", setFilm.ToString());
+                var bodyJson = JsonConvert.SerializeObject(setFilm);
+                string json = client.UploadString($"{apiUrl}", bodyJson);
                 var film2 = JsonConvert.DeserializeObject<FilmCore>(json);
                 return film2;
             }
