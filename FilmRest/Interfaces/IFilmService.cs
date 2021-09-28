@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using VideoClubInfra.DB.Models;
 
 namespace FilmRest.Interfaces
 {

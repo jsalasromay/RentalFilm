@@ -44,18 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\Models\Film.cs" />
-    <Compile Include="DB\Repository\FilmRepository.cs" />
     <Compile Include="HTTP\RestFullFilmService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FilmRest\FilmRest.csproj">
+      <Project>{b84432b2-484b-4664-a028-01c567a1c220}</Project>
+      <Name>FilmRest</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VideoClubCore\VideoClubCore.csproj">
       <Project>{d44ffd88-26b0-4aa9-84fc-1ca12aae8460}</Project>
       <Name>VideoClubCore</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

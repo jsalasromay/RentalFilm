@@ -9,9 +9,9 @@ namespace VideoClubCore.Services
 {
     public interface IFilmService
     {
-        Film GetById(string id);
-        List<Film> GetByCategory(string category);
-        Film SetFilm(Film film);
-        List<Film> GetAll();
+        FilmCore GetById(string id);
+        List<FilmCore> GetByCategory(string category);
+        FilmCore SetFilm(FilmCore film);
+        List<FilmCore> GetAll();
     }
 }

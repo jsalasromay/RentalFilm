@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmRest", "FilmRest\FilmRest.csproj", "{B84432B2-484B-4664-A028-01C567A1C220}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoClubInfra", "VideoClubInfra\VideoClubInfra.csproj", "{064F2B0B-AC1B-4A77-AFD6-6EA734817DB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmRest", "FilmRest\FilmRest.csproj", "{B84432B2-484B-4664-A028-01C567A1C220}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoClubCore", "VideoClubCore\VideoClubCore.csproj", "{D44FFD88-26B0-4AA9-84FC-1CA12AAE8460}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoClubConsole", "VideoClubConsole\VideoClubConsole.csproj", "{F2483239-FB07-4E3B-8BAB-CC100A18AE03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoClubConsole", "VideoClubConsole\VideoClubConsole.csproj", "{F2483239-FB07-4E3B-8BAB-CC100A18AE03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoClubInfratruc", "VideoClubInfratruc\VideoClubInfratruc.csproj", "{B37A7DC5-A49E-4613-9F5C-DDA19E7DFBD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{B84432B2-484B-4664-A028-01C567A1C220}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B84432B2-484B-4664-A028-01C567A1C220}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B84432B2-484B-4664-A028-01C567A1C220}.Release|Any CPU.Build.0 = Release|Any CPU
-		{064F2B0B-AC1B-4A77-AFD6-6EA734817DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{064F2B0B-AC1B-4A77-AFD6-6EA734817DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{064F2B0B-AC1B-4A77-AFD6-6EA734817DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{064F2B0B-AC1B-4A77-AFD6-6EA734817DB7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D44FFD88-26B0-4AA9-84FC-1CA12AAE8460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D44FFD88-26B0-4AA9-84FC-1CA12AAE8460}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D44FFD88-26B0-4AA9-84FC-1CA12AAE8460}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{F2483239-FB07-4E3B-8BAB-CC100A18AE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2483239-FB07-4E3B-8BAB-CC100A18AE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2483239-FB07-4E3B-8BAB-CC100A18AE03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B37A7DC5-A49E-4613-9F5C-DDA19E7DFBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B37A7DC5-A49E-4613-9F5C-DDA19E7DFBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B37A7DC5-A49E-4613-9F5C-DDA19E7DFBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B37A7DC5-A49E-4613-9F5C-DDA19E7DFBD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

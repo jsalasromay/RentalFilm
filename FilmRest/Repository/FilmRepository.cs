@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using VideoClubInfra.DB.Models;
 
-namespace VideoClubInfra.DB
+namespace FilmRest.Services
 {
     public class FilmRepository
     {

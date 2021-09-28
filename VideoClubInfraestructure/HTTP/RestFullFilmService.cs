@@ -1,12 +1,9 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Text;
-using VideoClubCore.Domain;
-using VideoClubCore.Services;
 
-namespace VideoClubInfra.HTTP
+namespace VideoClubInfraestructure.HTTP
 {
     public class RestFullFilmService : IFilmService
     {

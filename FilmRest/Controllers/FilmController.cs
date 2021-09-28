@@ -2,7 +2,6 @@
 using FilmRest.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using VideoClubInfra.DB.Models;
 
 namespace FilmRest.Controllers
 {

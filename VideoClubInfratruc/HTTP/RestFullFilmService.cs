@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using FilmRest;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -6,7 +7,7 @@ using System.Text;
 using VideoClubCore.Domain;
 using VideoClubCore.Services;
 
-namespace VideoClubInfra.HTTP
+namespace VideoClubInfratruc.HTTP
 {
     public class RestFullFilmService : IFilmService
     {
@@ -52,12 +53,12 @@ namespace VideoClubInfra.HTTP
         public FilmCore SetFilm(FilmCore film)
         {
             string apiUrl = "https://localhost:44306/film/SetFilm";
-            Film setFilm = new Film();
+            Film setFilm = new Film(film.Id, film.Name, film.Category);
             using (WebClient client = new WebClient())
             {
                 client.Headers["Content-type"] = "application/json";
                 client.Encoding = Encoding.UTF8;
-                string json = client.UploadString($"{apiUrl}", film.ToString());
+                string json = client.UploadString($"{apiUrl}", setFilm.ToString());
                 var film2 = JsonConvert.DeserializeObject<FilmCore>(json);
                 return film2;
             }

@@ -1,7 +1,7 @@
 ﻿using VideoClubCore.Domain;
 using VideoClubCore.Services;
-using VideoClubInfra.HTTP;
 using System;
+using VideoClubInfratruc.HTTP;
 
 namespace VideoClubConsole
 {
@@ -17,7 +17,7 @@ namespace VideoClubConsole
             var name = Console.ReadLine();
             Console.WriteLine("Introduce nueva categoria");
             var category = Console.ReadLine();
-            Film setFilm = new Film(id, name, category);
+            FilmCore setFilm = new FilmCore(id, name, category);
             var film2 = _filmService.SetFilm(setFilm);
 
             var film3 = _filmService.GetAll();
