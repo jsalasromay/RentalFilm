@@ -1,14 +1,20 @@
-﻿using System;
+﻿using FilmRest.Interfaces;
+using System;
 using System.Collections.Generic;
-using VideoClubCore.Domain;
-using VideoClubCore.Services;
 using VideoClubInfra.DB;
+using VideoClubInfra.DB.Models;
 
 namespace FilmRest.Services
 {
     public class FilmServices : IFilmService
     {
         private static FilmRepository _filmRepository = new FilmRepository();
+
+        public List<Film> GetAll()
+        {
+            return _filmRepository.GetAll();
+        }
+
         public List<Film> GetByCategory(string category)
         {
             return _filmRepository.GetByCategory(category);

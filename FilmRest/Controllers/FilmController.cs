@@ -1,8 +1,8 @@
-﻿using FilmRest.Services;
+﻿using FilmRest.Interfaces;
+using FilmRest.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using VideoClubCore.Domain;
-using VideoClubCore.Services;
+using VideoClubInfra.DB.Models;
 
 namespace FilmRest.Controllers
 {
@@ -27,6 +27,11 @@ namespace FilmRest.Controllers
         public Film SetFilm([FromBody] Film film)
         {
             return _filmService.SetFilm(film);
+        }
+        [HttpGet("GetAll")]
+        public List<Film> GetAll()
+        {
+            return _filmService.GetAll();
         }
     }
 }

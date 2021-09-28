@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using VideoClubCore.Domain;
+using VideoClubInfra.DB.Models;
 
-namespace VideoClubCore.Services
+namespace FilmRest.Interfaces
 {
     public interface IFilmService
     {

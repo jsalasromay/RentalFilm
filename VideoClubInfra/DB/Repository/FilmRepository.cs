@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using VideoClubCore.Domain;
+using VideoClubInfra.DB.Models;
 
 namespace VideoClubInfra.DB
 {
@@ -22,6 +22,10 @@ namespace VideoClubInfra.DB
         public List<Film> GetByCategory(string category)
         {
             return _film.Where(m => m.Category == category).ToList();
+        }
+        public List<Film> GetAll()
+        {
+            return _film.ToList();
         }
     }
 }

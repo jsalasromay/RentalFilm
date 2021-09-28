@@ -8,9 +8,23 @@ using VideoClubCore.Services;
 
 namespace VideoClubInfra.HTTP
 {
-    class RestFullFilmService : IFilmService
+    public class RestFullFilmService : IFilmService
     {
         private Film _film;
+
+        public List<Film> GetAll()
+        {
+            string apiUrl = "https://localhost:44306/film/GetAll";
+            using (WebClient client = new WebClient())
+            {
+                client.Headers["Content-type"] = "application/json";
+                client.Encoding = Encoding.UTF8;
+                string json = client.DownloadString($"{apiUrl}");
+                var film = JsonConvert.DeserializeObject<List<Film>>(json);
+                return film;
+            }
+        }
+
         public List<Film> GetByCategory(string category)
         {
             string apiUrl = "https://localhost:44306/film/GetMovieByCategory";
@@ -18,7 +32,7 @@ namespace VideoClubInfra.HTTP
             {
                 client.Headers["Content-type"] = "application/json";
                 client.Encoding = Encoding.UTF8;
-                string json = client.DownloadString($"{apiUrl}/{_film.Category}");
+                string json = client.DownloadString($"{apiUrl}/{category}");
                 var film = JsonConvert.DeserializeObject<List<Film>>(json);
                 return film;
             }
@@ -31,7 +45,7 @@ namespace VideoClubInfra.HTTP
             {
                 client.Headers["Content-type"] = "application/json";
                 client.Encoding = Encoding.UTF8;
-                string json = client.DownloadString($"{apiUrl}/{_film.Id}");
+                string json = client.DownloadString($"{apiUrl}/{id}");
                 var film = JsonConvert.DeserializeObject<Film>(json);
                 return film;
             }
@@ -39,6 +53,7 @@ namespace VideoClubInfra.HTTP
 
         public Film SetFilm(Film film)
         {
+            
             string apiUrl = "https://localhost:44306/film/SetFilm";
             using (WebClient client = new WebClient())
             {
