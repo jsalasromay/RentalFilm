@@ -9,7 +9,11 @@ namespace FilmRest.Controllers
     [ApiController]
     public class FilmController : ControllerBase
     {
-        private static IFilmService _filmService = new FilmServices();
+        private static IFilmService _filmService;
+        public FilmController(IFilmService filmService)
+        {
+            _filmService = filmService;
+        }
         [HttpGet("GetMovie/{id}")]
         public Film GetMovie(string id)
         {

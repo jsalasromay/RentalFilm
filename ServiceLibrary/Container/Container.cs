@@ -1,14 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using ServiceLibrary;
 using System;
-using System.Collections.Generic;
 using System.Text;
 using VideoClubCore.Services;
 using VideoClubInfratruc.HTTP;
 
-namespace VideoClubConsole
+namespace ServiceLibrary
 {
-    class Container
+    public class Container
     {
         public static IServiceProvider Build()
         {

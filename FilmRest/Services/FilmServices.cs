@@ -6,7 +6,11 @@ namespace FilmRest.Services
 {
     public class FilmServices : IFilmService
     {
-        private static FilmRepository _filmRepository = new FilmRepository();
+        private static IFilmRepository _filmRepository;
+        public FilmServices(IFilmRepository filmRepository)
+        {
+            _filmRepository = filmRepository;
+        }
         public List<Film> GetAll()
         {
             return _filmRepository.GetAll();

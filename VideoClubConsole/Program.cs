@@ -1,7 +1,4 @@
-﻿using VideoClubCore.Domain;
-using VideoClubCore.Services;
-using System;
-using VideoClubInfratruc.HTTP;
+﻿using System;
 using ServiceLibrary;
 using Microsoft.Extensions.DependencyInjection;
 

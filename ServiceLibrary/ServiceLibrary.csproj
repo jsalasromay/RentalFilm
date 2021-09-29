@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VideoClubCore\VideoClubCore.csproj" />
+    <ProjectReference Include="..\VideoClubInfratruc\VideoClubInfratruc.csproj" />
   </ItemGroup>
 
 </Project>
