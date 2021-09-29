@@ -6,7 +6,7 @@ using VideoClubCore.Services;
 
 namespace ServiceLibrary
 {
-    public class Application
+    public class Application : IApplication
     {
         private IFilmService _filmServices;
         public Application(IFilmService filmServices)
