@@ -15,17 +15,23 @@ namespace ServiceLibrary
         }
         public void Run()
         {
-            var listFilm = GetAll();
+            GetById();
         }
-        public List<FilmCore> GetAll()
+        public void GetAll()
         {
             Console.WriteLine("Listado de peliculas");
             var film = _filmServices.GetAll();
             foreach (var f in film)
             {
-                Console.WriteLine($"Nombre: {f.Name}, Categoria: {f.Category}");
+                Console.WriteLine($"Identificador: {f.Id}, Nombre: {f.Name}, Categoria: {f.Category}");
             }
-            return film;
+        }
+        public void GetById()
+        {
+            Console.WriteLine("Seleccione el Identificador de la pelicula que desea ver: ");
+            GetAll();
+            var film = _filmServices.GetById(Console.ReadLine());
+            Console.WriteLine($"Nombre: {film.Name}");
         }
     }
 }
