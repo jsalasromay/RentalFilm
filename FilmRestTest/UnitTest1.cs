@@ -1,5 +1,5 @@
 using FilmRest;
-using FilmRest.Services;
+using FilmRest.Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace FilmRestTest
@@ -7,7 +7,12 @@ namespace FilmRestTest
     [TestClass]
     public class UnitTest1
     {
-        FilmServices _filmServices = new FilmServices();
+        private static IFilmService _filmServices;
+
+        public UnitTest1(IFilmService filmService)
+        {
+            _filmServices = filmService;
+        }
 
         [TestMethod]
         public void TestGetById()
